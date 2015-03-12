@@ -1,0 +1,234 @@
+%\documentclass[11pt, draft, oneside]{report}
+\documentclass[11pt]{report}
+\makeindex
+\usepackage{ngerman,a4,showidx} %index an seite
+%\usepackage{ngerman,a4wide}
+%for pdfLaTeX output Bilder als .png speichern:
+\usepackage{listings}
+
+\usepackage[pdftex]{graphicx}
+% f\"{u}r normales LaTeX->dvi, Bilder als .eps speichern:
+%\usepackage{graphicx} \DeclareGraphicsExtensions{.eps} \graphicspath{{bilder/eps/}}
+
+%Definition der Seitengr"osse
+\setlength{\textwidth}{15 true cm}
+\setlength{\textheight}{22 true cm}
+\oddsidemargin  0.5 cm
+\evensidemargin 0.5 cm
+\topmargin      0 cm
+
+\selectlanguage{german}
+%Beispiel fuer ein neues LaTex Kommando
+\newcommand{\QSIM}{{\sc QSim}}
+
+
+\begin{document}
+
+\begin{titlepage}
+\begin{center}
+  \vspace*{0.5cm}
+  {\LARGE [Arbeitsprotokoll Studiomesstechnik LU]} \\
+  \vspace{15mm}
+  {\huge \bf Tag 3 - Messung von D/A- sowie A/D-Wandlern \\}
+
+  \vspace{15mm}
+  {\LARGE Andreas Johann Hörmer} \\
+  \vspace{10mm}%15
+  -------------------------------------- \\
+  \vspace{10mm}%15
+  \large
+  Institut für Signalverarbeitung und Sprachkommunikation \\
+  Technische Universit\"{a}t Graz \\
+
+
+  %Vorstand: O.\,Univ.-Prof.\,Dipl.-Ing.\,Dr.\,techn.\,Reinhold Wei{\ss} \\
+  \vspace{15mm}%1
+  \begin{figure}[!ht]
+  \begin{center}
+  \centerline{\includegraphics[width=4cm,keepaspectratio=true]{TULogoneu}}
+  \end{center}
+  \end{figure}
+  \vspace{10mm}
+Laborbetreuung: DI Wolfgang Truppe \\
+  %Begutachter: O.\,A.o.Univ.-Prof.\,Dipl.-Ing.\,Dr.\,techn.\,Eugen Brenner \\
+  %\vspace{5mm}
+  %Betreuer: Univ.-Ass. Dipl.-Ing.\,Dr.\,techn.\,N. N.\\
+  \vfill
+  %\newline
+  %\normalsize
+%  Graz, im September 2008
+  \vspace{0.5cm}
+\end{center}
+\end{titlepage}
+
+% Die Titelseite ist immer in Deutsch (austrian), danach h\"{a}ngt es von der
+% Sprache der Diplomarbeit ab. Jedenfalls muss eine Kurzfassung und
+% ein Abstract existieren
+
+%\thispagestyle{empty} 
+%\selectlanguage{english}
+
+
+\newpage
+\selectlanguage{german}
+\vspace*{2.2 cm}
+{\Large
+\noindent
+{\bf Abstract}} \\
+\vspace*{0.3 cm}
+
+\noindent
+Main target of this bachelor thesis is the evaluation of different code hardening techniques for industrial automation systems. Evaluation of code tampering is on a case study of hydro power plant systems. Research reaches from compiler flag analysis to white box cryptography. Implementation of a proof of concept prototype for software-based remote attestation by using the researched principles is required.
+
+
+%\newpage
+
+
+%\selectlanguage{english}
+%\vspace*{2.2 cm}
+%{\Large
+%\noindent
+%{\bf STATUTORY DECLARATION}} \\
+%\vspace*{0.3 cm}
+
+%\noindent
+%I declare that I have authored this thesis independently, that I have not used other than the declared sources / %resources, and that I have explicitly marked all material which has been quoted either literally or by content from %the used sources.
+%\vspace*{0.3 cm}
+
+%\vspace{2 cm}
+
+%\noindent ..............................\hfill ...........................................
+
+
+%\noindent date  \hfill (signature)
+
+
+\newpage
+\selectlanguage{german}
+%\newpage
+%\vspace*{2.2 cm}
+%{\Large
+%\noindent
+%{\bf Danksagung}} \\
+%\vspace*{0.3 cm}
+% OPTIONAL
+
+%\noindent
+%Diese Diplomarbeit wurde im (Studien)Jahr am Institut f\"{u}r
+%Technische Informatik an der Technischen Universit\"{a}t Graz
+%durchgef\"{u}hrt.
+
+%\smallskip
+%Danksagung an alle am Institut bzw. bei Firmen, die geholfen
+%haben....
+
+%\medskip
+%Danksagung an Freunde und Freundinnen f\"{u}r das Verst\"{a}ndnis, ebenso
+%den Eltern und allen sonstigen Sponsoren....
+
+%\vspace{2 cm}
+
+%
+%\noindent Graz, im Monat Jahr \hfill Name des Diplomanden
+
+\newpage
+% Inhaltsverzeichnis
+\tableofcontents  
+
+% Tabellenverzeichnis
+% OPTIONAL
+%
+
+
+
+
+\listoffigures 
+
+% Abbildungsverzeichnis
+% OPTIONAL
+%\listoftables
+
+%Seitennummerierung am Kopf inkl. Kapitel"uberschrift
+\pagestyle{headings}
+
+%---------------------------------------------------------------------------------------------------------
+%---------------------------------------------------------------------------------------------------------
+\chapter{Introduction}
+% Einleitung ist Kapitel 1
+\label{kap:Einleitung} 
+
+%---------------------------------------------------------------------------------------------------------
+\section{Motivation}
+
+
+
+%---------------------------------------------------------------------------------------------------------
+\section{Purpose}
+
+
+
+
+\begin{center}
+\begin{tabular}{|c||c|c|}
+\hline 
+SIL & 	PFH &		RRF\\ \hline
+1 &	0.00001-0.000001 &	100,000-1,000,000\\
+2 &	0.000001-0.0000001 &		1,000,000-10,000,000\\
+3 &	0.0000001-0.00000001 		& 10,000,000-100,000,000\\
+4 &	0.00000001-0.000000001 &	100,000,000-1,000,000,000\\
+\hline
+\end{tabular}
+\end{center}
+
+
+\begin{center}
+\begin{figure}[htbp]
+\includegraphics[width=11cm,keepaspectratio=true]{PROFIsafe}
+\caption{PROFIsafe}
+\label{Abb.:1}
+\end{figure}
+\end{center}
+
+One packet starts with the F-Input/Output data in consideration of an data type subset. The structure of a device is defined in an appendant GSD (General Station Description) file. Automation of production and processes has different requirements to the system. First uses short signals, which have to be processed very quickly. Process automation uses long signals with floating point values, which are allowed to be processes much slower. PROFIsafe 
+offers two different data structures. One has a length of 12 Byte with 3 Byte CRC signature. The other one is 123 Byte long with 4 Byte CRC. For synchronisaten status bytes exists. Different products from different manufacturers communicate within a PROFIsafe domain. For correct interaction the compliance have to be certified by certification authorities. For every device a safety handbook with informations about SIL level $SIL_{CL}$ as well as the conditional probability of failure per hour $PFHd$ is obligatory.
+
+[http://www.profibus.com/nc/downloads/downloads/profisafe-technology-and-application-system-description/display/ PROFIsafe_Systembeschreibung_v_2010_Deutsch.pdf]
+
+
+\subsubsection{Safety over ETHERcat}
+Safety over ETHERcat is an open protocol abbreviated with FSoE "FailSafe over EtherCAT". It defines a safety communication layer for the EtherCAT-standard. FSoE has full compliance with SIL3 and is able to transfer safe and unsafe information on the same channel. Transfer rates and timing are not limited. A main aspect of FSoE is, that the length of safe process data is not restricted, so very short and also very long frames are possible.
+
+
+
+
+\chapter{Schlu{\ss}bemerkung und Ausblick}
+  \label{kap:ausblick}
+  %\input{s_ausblick}
+
+\begin{appendix}
+\chapter{z.B. Begriffsbestimmung}
+\section{z.B. Definitionen}
+%\input{a_text}
+\section{z.B. Verwendete Symbole}
+%\input{a_files}
+\end{appendix}
+
+%nicht referenzierte Literaturstellen
+
+\nocite{mseifter88,pmandl97,weiss92,weiss92a,ginthoer93}
+
+% Literaturverzeichnis einbinden, alpha, plain, unsrt, abbrv
+\newpage
+%Eintrag im Inhaltsverzeichnis
+\addtocounter{page}{1}
+\addcontentsline{toc}{chapter}{Literaturverzeichnis}
+\addtocounter{page}{-1}
+
+\bibliographystyle{alpha}
+
+\bibliography{protokoll}
+
+%Index File
+%\input{diplom.ind}
+
+\end{document}
