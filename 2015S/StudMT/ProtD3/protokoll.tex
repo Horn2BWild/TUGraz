@@ -154,7 +154,7 @@ This report is consisting of XXXXXXXXXXXXXX pages.
 
 %---------------------------------------------------------------------------------------------------------
 %---------------------------------------------------------------------------------------------------------
-\chapter{Introduction}
+\chapter{Preamble}
 % Einleitung ist Kapitel 1
 \label{kap:Einleitung} 
 
@@ -166,6 +166,28 @@ This report is consisting of XXXXXXXXXXXXXX pages.
 %---------------------------------------------------------------------------------------------------------
 \section{Purpose}
 
+%---------------------------------------------------------------------------------------------------------
+%---------------------------------------------------------------------------------------------------------
+\chapter{DAC measurements}
+\section{Introduction}
+\section{Measurements}
+	\subsection{Experimental setup}
+		\subsection{Results}
+		\subsection{Discussion}
+
+
+%---------------------------------------------------------------------------------------------------------
+%---------------------------------------------------------------------------------------------------------
+\chapter{ADC/preamplifier measurements}
+\section{Introduction}
+\section{Measurements}
+	\subsection{Experimental setup}
+		\subsection{Results}
+		\subsection{Discussion}
+
+%---------------------------------------------------------------------------------------------------------
+%---------------------------------------------------------------------------------------------------------
+\chapter{Conclusion}
 
 
 
@@ -190,21 +212,6 @@ SIL & 	PFH &		RRF\\ \hline
 \end{figure}
 \end{center}
 
-One packet starts with the F-Input/Output data in consideration of an data type subset. The structure of a device is defined in an appendant GSD (General Station Description) file. Automation of production and processes has different requirements to the system. First uses short signals, which have to be processed very quickly. Process automation uses long signals with floating point values, which are allowed to be processes much slower. PROFIsafe 
-offers two different data structures. One has a length of 12 Byte with 3 Byte CRC signature. The other one is 123 Byte long with 4 Byte CRC. For synchronisaten status bytes exists. Different products from different manufacturers communicate within a PROFIsafe domain. For correct interaction the compliance have to be certified by certification authorities. For every device a safety handbook with informations about SIL level $SIL_{CL}$ as well as the conditional probability of failure per hour $PFHd$ is obligatory.
-
-[http://www.profibus.com/nc/downloads/downloads/profisafe-technology-and-application-system-description/display/ PROFIsafe_Systembeschreibung_v_2010_Deutsch.pdf]
-
-
-\subsubsection{Safety over ETHERcat}
-Safety over ETHERcat is an open protocol abbreviated with FSoE "FailSafe over EtherCAT". It defines a safety communication layer for the EtherCAT-standard. FSoE has full compliance with SIL3 and is able to transfer safe and unsafe information on the same channel. Transfer rates and timing are not limited. A main aspect of FSoE is, that the length of safe process data is not restricted, so very short and also very long frames are possible.
-
-
-
-
-\chapter{Schlu{\ss}bemerkung und Ausblick}
-  \label{kap:ausblick}
-  %\input{s_ausblick}
 
 \begin{appendix}
 \chapter{z.B. Begriffsbestimmung}
