@@ -207,13 +207,26 @@ This parameter describes the difference between the lowest output level and the 
 \item 942/61: phones 4 (RP1)
 \end{itemize}
 \end{itemize}
+
 \begin{figure}[htbp]
 \begin{center}
 \includegraphics[width=14cm,keepaspectratio=true]{DACstructure}
 \caption{experimental setup for DAC measurement}
-\label{Abb.:1}
+\label{fig:dacstructure}
 \end{center}
 \end{figure}
+
+\begin{center}
+\begin{tabular}{|c||c|c|}
+\hline 
+output channel  & 	output level &		input level\\ \hline
+1 &	0.00001-0.000001 &	100,000-1,000,000\\
+2 &	0.000001-0.0000001 &		1,000,000-10,000,000\\
+3 &	0.0000001-0.00000001 		& 10,000,000-100,000,000\\
+4 &	0.00000001-0.000000001 &	100,000,000-1,000,000,000\\
+\hline
+\end{tabular}
+\end{center}
 	\subsection{Results}
 
 \begin{figure}[htbp]
@@ -286,8 +299,25 @@ At low amplitudes it can occur that the analog signal can not be quantized prope
 Dithering describes the process of adding additional noise to a signal. In terms of audio engineering it helps to break up correlated error signals from quantization steps. Random noise is typially less objectionable than harmonic tones, produced by quantization. Dithering helps to break up those periodic cycles. Addionally noise shaping can be used. Noise energy at low frequency can be shaped and moved to higher frequency ranges, where the human listening is less affected.
 \section{Measurements}
 	\subsection{Experimental setup}
+\begin{figure}[htbp]
+\begin{center}
+\includegraphics[width=14cm,keepaspectratio=true]{DACstructure}
+\caption{experimental setup for DAC measurement}
+\label{fig:dacstructure}
+\end{center}
+\end{figure}
 		\subsubsection{Equipment}
-
+\begin{itemize}
+\item AudioPrecision sys.2722
+\item AudioPrecision Software v3.3 (build118)
+\item PC (Windows 7 32bit)
+\item $LAWO \; mc^2 66$
+\item DALLIS DAC slots
+\begin{itemize}
+\item 941/53: HQ channel 5 (AR)
+\item 942/84: channel 21 (AR)
+\end{itemize}
+\end{itemize}
 	\subsection{Results}
 \begin{figure}[htbp]
 \begin{center}
