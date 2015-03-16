@@ -5,6 +5,7 @@
 %\usepackage{ngerman,a4wide}
 %for pdfLaTeX output Bilder als .png speichern:
 \usepackage{listings}
+\usepackage{nomencl}
 
 \usepackage[pdftex]{graphicx}
 % f\"{u}r normales LaTeX->dvi, Bilder als .eps speichern:
@@ -83,7 +84,7 @@ Supervisor: DI Wolfgang Truppe \\
 
 \noindent
 Main target of this laboratory was the measurement of different DACs and ADCs of the fully digital mixing panel LAWO $mc^2 66$. Additionally preamplifiers of a high quality input compared to standard inputs were measured. Measurements were done qualitatively in terms of dynamic ranges and frequency characteristics.\\
-This report is consisting of XXXXXXXXXXXXXX pages. 
+This report consists of XXXXXXXXXXXXXX pages. 
 
 
 %\newpage
@@ -164,11 +165,11 @@ This report is consisting of XXXXXXXXXXXXXX pages.
 
 %---------------------------------------------------------------------------------------------------------
 \section{Motivation}
-
+Due to high computation speeds and huge possibilities for postprocessing techniques almost everything became digital. For digital audio a conversion between the digital and the analog domain and vice versa is inevitable. As ADCs and DACs are the links between those two domains they affect the resulting sound quality very much. For best results a high quality of conversion components is needed. 
 
 %---------------------------------------------------------------------------------------------------------
 \section{Purpose}
-
+The main purpose of the laboratory was the measurement of important parameters of conversion components. Parameters like dynamic range and frequency responses at different preamplifier gains as well as linearity of converters is shown. A FFT analysis of noise was made.
 
 
 %---------------------------------------------------------------------------------------------------------
@@ -289,6 +290,12 @@ SIL & 	PFH &		RRF\\ \hline
 
 \begin{appendix}
 \chapter{List of Abbreviations}
+
+\nomenclature{ADC}{analog to digital converter}
+\nomenclature{DAC}{digital to analog converter}
+\nomenclature{THD}{total harmonic distortion}
+\nomenclature{THD+N}{total harmonic distortion including noise}
+\printnomenclature
 \chapter{High resolution diagrams}
 \end{appendix}
 
