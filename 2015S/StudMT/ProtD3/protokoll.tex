@@ -250,15 +250,22 @@ The sampling time is a parameter which defines the time between sampling at the 
 The jitter regarding to ADCs measures the time difference between the optimal sampling point and the actual sampling point. For high quality ADCs this parameter should be very low.
 \end{itemize}
 \subsubsection{Quantization}
+Quantization is the process of mapping a continuous signal to a countable set of values. The simplest way to quantize a signal is to round the sampled value to the nearest digital amplitude. Figure \ref{fig:quantization}  shows the quantization process. At discrete time steps the value of the input signal is measured and rounded to the nearest discrete value (green and yellow curve). The difference between those two signals is called quantization error or quantization noise and is shown in the red curve. As it can be seen quantization is a lossy process. The maximum error of quantization is always half of the step size between two symbols. The dynamic of quantization increases with every bit with
+\begin{equation}
+dyn_{[dB]}=20\cdot log(2^Q) \approx 1.761 + 6.02\cdot Q [dB]
+\end{equation}
+$$Q....number\; of\; bits$$
 \begin{figure}[htbp]
 \begin{center}
 \includegraphics[width=14cm,keepaspectratio=true]{quantization}
 \caption{analog-digital conversion of an analog signal}
-\label{Abb.:1}
+\label{fig:quantization}
 \end{center}
 http://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Quantization\_error.png/500px-Quantization\_error.png
 \end{figure}
+At low amplitudes it can occur that the analog signal can not be quantized properly due to low resolution. In such case, additional dither can be used.
 \subsubsection{Dithering}
+\paragraph{Noise shaping}
 \section{Measurements}
 	\subsection{Experimental setup}
 		\subsubsection{Equipment}
