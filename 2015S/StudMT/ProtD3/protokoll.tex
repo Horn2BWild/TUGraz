@@ -176,6 +176,21 @@ The main purpose of the laboratory was the measurement of important parameters o
 %---------------------------------------------------------------------------------------------------------
 \chapter{DAC measurements}
 \section{Introduction}
+\subsection{DAC}
+A digital-analog-converter (DAC) converts a digital signal (discrete in time and amplitude) into an analog signal. In order to produce sound this analog signal can be used to drive an amplifier and be connected to loudspeakers. Typical DACs for audio applications are low speed components with high resolution. As every conversion between digital and analog domains can degrade signals and add possible distortions, some parameters are useful to determine the quality of converters:
+\begin{itemize}
+\item resolution\\
+The resolution (in bit) is the number of possible output states in the amplitude domain. The higher the resolution is, the more different output states can be created. The difference between different states become lower and the analog signal becomes finer. In audio applications the resolution is also known as audio bit depth.
+\item maximum sampling rate\\
+The sampling rate defines the number of changes of the output signals can be made per second.
+\item monotonicity\\
+This describes the linearity of the converter. When the digital input increases, the analog output should have the ability to move the same amount upwards without doing anything else (dips, ripples, ...).
+\item THD+N\\
+The total harmonic distortion and noise is a measurement of the unwanted harmonics produced by the converter. Especially for small signals created by the converter could affect the output signal significantly. 
+\item dynamic range\\
+This parameter describes the difference between the lowest output level and the highest output level which can be driven by the analog output. The lowest level is often given by the noise floor.
+
+\end{itemize}
 \section{Measurements}
 	\subsection{Experimental setup}
 		\subsubsection{Equipment}
