@@ -107,7 +107,11 @@ This report consists of XXXXXXXXXXXXXX pages.
 
 
 %\noindent date  \hfill (signature)
-
+\renewcommand{\nomname}{List of abbreviations}
+\setlength{\nomlabelwidth}{.50\hsize}
+\renewcommand{\nomlabel}[1]{#1 \dotfill}
+\setlength{\nomitemsep}{-\parsep}
+\makenomenclature
 
 \newpage
 \selectlanguage{english}
@@ -387,7 +391,6 @@ SIL & 	PFH &		RRF\\ \hline
 
 
 \begin{appendix}
-\chapter{List of Abbreviations}
 \nomenclature{ADC}{analog to digital converter}
 \nomenclature{DAC}{digital to analog converter}
 \nomenclature{THD}{total harmonic distortion}
@@ -398,7 +401,8 @@ SIL & 	PFH &		RRF\\ \hline
 \nomenclature{RP1}{Regieplatz 1, audio studio TU Graz}
 \nomenclature{SSL}{Solid State Logic}
 \nomenclature{DALLIS}{Digital Audio Line Level Interface System}
-\printnomenclature
+
+
 
 
 \chapter{High resolution diagrams}
@@ -475,6 +479,8 @@ SIL & 	PFH &		RRF\\ \hline
 
 
 
+
+\printnomenclature
 
 \end{appendix}
 
