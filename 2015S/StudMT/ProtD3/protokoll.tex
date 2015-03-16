@@ -6,7 +6,7 @@
 %for pdfLaTeX output Bilder als .png speichern:
 \usepackage{listings}
 \usepackage{nomencl}
-
+\usepackage{framed,color}
 \usepackage[pdftex]{graphicx}
 % f\"{u}r normales LaTeX->dvi, Bilder als .eps speichern:
 \usepackage{graphicx} \DeclareGraphicsExtensions{.eps} %\graphicspath{{bilder/eps/}}
@@ -227,6 +227,11 @@ phones ch.4 &	-15 &	+6\\
 \hline
 \end{tabular}
 \end{center}
+
+\begin{leftbar}
+\textit{Note:\\
+It seemed that it is not possible to measure line out channel 24 (RP1), because it seemed to be connected directly to the talkback channel. After some search it turned out, that channel 24 was not mounted beside channel 23, but on patchbay 2.}
+\end{leftbar}
 	\subsection{Results}
 
 \begin{figure}[htbp]
