@@ -238,7 +238,25 @@ This parameter describes the difference between the lowest output level and the 
 \chapter{ADC/preamplifier measurements}
 \section{Introduction}
 \subsection{ADC}
+An analog-digital-converter converts an analog signal to a digital signal by sampling at discrete times and quantization of the analog signal to discrete amplitudes. Some important parameters for ADC quality measurements are
+\begin{itemize}
+\item resolution\\
+The resolution of an ADC measures the number of quantization steps. Each analog value is set to the nearest quantization step. The higher the resolution is, the higher is the accuracy of the signal in the digital domain.
+\item sampling rate\\
+This parameter describes the number of time steps per second for quantization. For higher rates the signal can be converted more often and represented with more accuracy.
+\item sampling time\\
+The sampling time is a parameter which defines the time between sampling at the analog input and providing the digital value at the digital output.
+\item jitter\\
+The jitter regarding to ADCs measures the time difference between the optimal sampling point and the actual sampling point. For high quality ADCs this parameter should be very low.
+\end{itemize}
 \subsubsection{Quantization}
+\begin{figure}[htbp]
+\begin{center}
+\includegraphics[width=14cm,keepaspectratio=true]{quantization}
+\caption{analog-digital conversion of an analog signal}
+\label{Abb.:1}
+\end{center}
+\end{figure}
 \subsubsection{Dithering}
 \section{Measurements}
 	\subsection{Experimental setup}
