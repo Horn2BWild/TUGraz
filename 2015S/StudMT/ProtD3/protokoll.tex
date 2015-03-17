@@ -292,6 +292,25 @@ In figure \ref{fig:da10} the frequency responses of the DACs can be seen, detail
 \end{figure}
 
 	\subsection{Discussion}
+In figure \ref{fig:da10} the frequency response of the different DACs are shown. It can be obtained that the amplitude distributions are almost flat over the whole frequency range. At about 21kHz a steep slope down can be seen, which occurs because this range contains half of the sampling frequency (44.1kHz). A lower -3dB cut-off frequency couldn't be measured because it's lower than 10Hz and so lower than the working range of AudioPrecision. When zooming in at the upper part (figure \ref{fig:dafreqvergleich}) some ripples can be seen. They are expected and usual for filters with steep slopes. It can also be obtained that the frequency response is not completely flat when zooming in, but in a negligible amount (left dB scale).\\
+The dynamic ranges seen in figure \ref{fig:dadynvergleich} are over a wide range. It can be obtained that the amplification is up to the $0dB_{FS}$-limit, the lower limit is given by the noise floor. It can also be seen that the amplification is completely linear. The measured dynamic ranges are listed in tabular \ref{tab:dadynrange}. An interesting aspect is that the dynamic of the monitor out is slightly lower than the others, but doesn't need to have so much output power.\\
+When looking at the FFT analyis in figure \ref{fig:fft} the 10kHz sine wave can be determined easily. It also can be seen that the noise is shaped, and energy from the low, more hearable frequency ranges, is moved to higher frequencies, which don't affect the human hearing as much as at low frequencies.
+\begin{table}
+\begin{center}
+\begin{tabular}{|c|c|}
+\hline 
+output channel  & 	dynamic range	\\	 \hline
+line out ch.24 (AR) &	105dB \\
+line out ch.24 (RP1) &	105dB \\
+HQ monitor ch.6 &	108dB	\\
+phones ch.4 &	102dB \\
+SSL & 106dB \\
+\hline
+\end{tabular}
+\caption{values for output and input levels for DAC measurements}
+\label{tab:dadynrange}
+\end{center}
+\end{table}
 
 
 %---------------------------------------------------------------------------------------------------------
