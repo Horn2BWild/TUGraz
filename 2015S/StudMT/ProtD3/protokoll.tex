@@ -348,7 +348,7 @@ At low amplitudes it can occur that the analog signal can not be quantized prope
 Dithering describes the process of adding additional noise to a signal. In terms of audio engineering it helps to break up correlated error signals from quantization steps. Random noise is typially less objectionable than harmonic tones, produced by quantization. Dithering helps to break up those periodic cycles. Addionally noise shaping can be used. Noise energy at low frequency can be shaped and moved to higher frequency ranges, where the human listening is less affected.
 \section{Measurements}
 	\subsection{Experimental setup}
-
+The experimental setup for measuring a standard quality microphone input as well as a HQ microphone input of DALLIS is shown in figure \ref{fig:adcstructure}. The analog output of AP was set to $-64dB_u$, the digital input had to have a level of $-18dB_{FS}$. The frequency responses were measured using preamplifier gains 70dB, 55dB, 40dB, 25dB and 16/20dB (HQ, standard quality). The frequency sweep for measuring the frequency response had 200 steps from 10Hz to 30kHz. The amplitude sweep for measuring the dynamic range started at $-140dB_{FS}$ and ended at $30-gain\; dB_{FS}$. The sweeps were done using the analog generator of AP.
 \begin{figure}[htbp]
 \begin{center}
 \includegraphics[width=14cm,keepaspectratio=true]{ADCstructure}
