@@ -247,12 +247,15 @@ A measurement of phase shifts is not possible when driving the system with a dig
 \textit{ Note:\\
 When measuring the frequency response it has to be checked that every device uses the same sampling frequency. Otherwise resampling will occur and the frequency response will have slopes in unexpected frequency ranges.}
 \end{leftbar}
-\subsubsection{measurement of dynamic range}
-
 \begin{leftbar}
 \textit{Note:\\
 It seemed that it is not possible to measure line out channel 24 (RP1), because it seemed to be connected directly to the talkback channel. After some search it turned out, that channel 24 was not mounted beside channel 23, but on patchbay 2.}
 \end{leftbar}
+\subsubsection{measurement of dynamic range}
+The dynamic range was measured using a 1kHz sine wave and sweeping the amplitude, starting at $-130dB_{FS}$, as end amplitude $0dB_{FS}$ was chosen. As analyzer LevelA was chosen.
+\subsubsection{FFT analysis}
+The FFT analysis (digital analyzer $\rightarrow$ FFT) was done with a window length of 32768 and a sampling frequency of 262kHz. The results of 16 FFTs were averaged for better graph generation. The FFT was done using a 10kHz sine wave and shaped dithering for noise shaping.
+
 	\subsection{Results}
 
 \begin{figure}[htbp]
