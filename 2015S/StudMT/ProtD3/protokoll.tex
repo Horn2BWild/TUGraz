@@ -348,6 +348,7 @@ At low amplitudes it can occur that the analog signal can not be quantized prope
 Dithering describes the process of adding additional noise to a signal. In terms of audio engineering it helps to break up correlated error signals from quantization steps. Random noise is typially less objectionable than harmonic tones, produced by quantization. Dithering helps to break up those periodic cycles. Addionally noise shaping can be used. Noise energy at low frequency can be shaped and moved to higher frequency ranges, where the human listening is less affected.
 \section{Measurements}
 	\subsection{Experimental setup}
+
 \begin{figure}[htbp]
 \begin{center}
 \includegraphics[width=14cm,keepaspectratio=true]{ADCstructure}
@@ -368,11 +369,12 @@ Dithering describes the process of adding additional noise to a signal. In terms
 \end{itemize}
 \end{itemize}
 	\subsection{Results}
+Figure \ref{fig:adlawo} shows the frequency response of the microphone channel as well as the high quality microphone channel with different preamplifier gains, a more detailed view is given in figure \ref{fig:adlawovergleich}. The THD+N of the standard quality input is shown in figure \ref{fig:adthd}, the THD+N of the high quality microphone input in figure \ref{fig:adhqthd}.
 \begin{figure}[htbp]
 \begin{center}
 \includegraphics[width=14cm,keepaspectratio=true]{LAWOVorverstaerker5u21dB}
 \caption{LAWO ADC and preamplifier}
-\label{Abb.:1}
+\label{fig:adlawo}
 \end{center}
 \end{figure}
 
@@ -380,7 +382,7 @@ Dithering describes the process of adding additional noise to a signal. In terms
 \begin{center}
 \includegraphics[width=14cm,keepaspectratio=true]{LAWOVorverstaerker5u21dBVergleichszoom}
 \caption{LAWO ADC and preamplifier detailed view}
-\label{Abb.:1}
+\label{fig:adlawovergleich}
 \end{center}
 \end{figure}
 
@@ -388,7 +390,7 @@ Dithering describes the process of adding additional noise to a signal. In terms
 \begin{center}
 \includegraphics[width=14cm,keepaspectratio=true]{THDAR21dBVergleich}
 \caption{dynamic range of channel AR21}
-\label{Abb.:1}
+\label{fig:adthd}
 \end{center}
 \end{figure}
 
@@ -396,7 +398,7 @@ Dithering describes the process of adding additional noise to a signal. In terms
 \begin{center}
 \includegraphics[width=14cm,keepaspectratio=true]{THDAR5HQdBVergleich}
 \caption{dynamic range of high quality channel AR5}
-\label{Abb.:1}
+\label{fig:adhqthd}
 \end{center}
 \end{figure}
 
@@ -441,6 +443,7 @@ SIL & 	PFH &		RRF\\ \hline
 \nomenclature{RP1}{Regieplatz 1, audio studio TU Graz}
 \nomenclature{SSL}{Solid State Logic}
 \nomenclature{DALLIS}{Digital Audio Line Level Interface System}
+\nomenclature{$dB_{FS}$}{dB Full Scale}
 
 
 
