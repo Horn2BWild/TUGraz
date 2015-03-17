@@ -211,7 +211,7 @@ This parameter describes the difference between the lowest output level and the 
 \item 942/61: phones 4 (RP1)
 \end{itemize}
 \end{itemize}
-
+The experimental setup for this measurement can be seen in figure \ref{fig:dacstructure}. A digital signal is sent out with AudioPrecision and routed to the DALLIS. For that reason the AP AES2 was connected to AES3 input 1 right at the patchbay. There different output channels were tested. The analog signal is routed back to the analog input of the AudioPrecision system. 
 \begin{figure}[htbp]
 \begin{center}
 \includegraphics[width=14cm,keepaspectratio=true]{DACstructure}
@@ -219,7 +219,12 @@ This parameter describes the difference between the lowest output level and the 
 \label{fig:dacstructure}
 \end{center}
 \end{figure}
-
+\subsubsection{measurement of frequency response}
+The frequency response was measured as in the analog domain. The frequency sweep was done with following configuration:\\
+AP digital generator $\rightarrow$ frequency $\rightarrow$ frequency sweep.\\
+measured frequency range: $10Hz < f < 30kHz$\\
+The digital output was set to a resolution of 24 bits at an output voltage of 5V. All other values were set to default values. As every output channel had different levels, the output levels of AP were adapted. The values can be found in tabular \ref{tab:dacvalues}.
+\begin{table}
 \begin{center}
 \begin{tabular}{|c||c|c|}
 \hline 
@@ -230,7 +235,19 @@ HQ monitor ch.6 &	-9 		& +6\\
 phones ch.4 &	-15 &	+6\\
 \hline
 \end{tabular}
+\caption{values for output and input levels for DAC measurements}
+\label{tab:dacvalues}
 \end{center}
+\end{table}
+\begin{leftbar}
+\textit{ Note:\\
+A measurement of phase shifts is not possible when driving the system with a digital output signal.}
+\end{leftbar}
+\begin{leftbar}
+\textit{ Note:\\
+When measuring the frequency response it has to be checked that every device uses the same sampling frequency. Otherwise resampling will occur and the frequency response will have slopes in unexpected frequency ranges.}
+\end{leftbar}
+\subsubsection{measurement of dynamic range}
 
 \begin{leftbar}
 \textit{Note:\\
@@ -312,7 +329,7 @@ Dithering describes the process of adding additional noise to a signal. In terms
 \begin{center}
 \includegraphics[width=14cm,keepaspectratio=true]{ADCstructure}
 \caption{experimental setup for ADC measurement}
-\label{fig:dacstructure}
+\label{fig:adcstructure}
 \end{center}
 \end{figure}
 		\subsubsection{Equipment}
