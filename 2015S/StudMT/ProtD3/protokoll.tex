@@ -403,6 +403,29 @@ Figure \ref{fig:adlawo} shows the frequency response of the microphone channel a
 \end{figure}
 
 	\subsection{Discussion}
+It can be easily obtained in figures \ref{fig:adlawo} and \ref{fig:adlawovergleich} that both ADCs have a very flat frequency response over the whole frequency range. A steep slope down can be seen at half of the sampling frequency. The standard quality input has less amplification of low amplitudes, but at a very low frequency and with inegligible difference.\\
+In figure \ref{fig:adthd} the THD+N as well as the dynamic range of the standard definition microphone input at different preamplifier gains are shown.  The input is straight linear at every preamplifier gain. The THD shown on the left side increases with lower amplifier gain, but also the noise floor is lower. The lower the preamplifier gain is the higher the dynamic range. On the right side a steep increasing distortion can be obtained. Dynamic ranges are shown in tabular \ref{ŧab:amplgains}.\\
+Figure \ref{fig:adhqthd} show the dynamic range and the THD+N of the high quality microphone input. The noise floor is a little bit lower than with standard quality inputs, but there is almost no audible difference. Dynamic ranges of the high quality microphone input are higher and can be seen for different preamplification gains in tabular \ref{tab:amplgains}.
+\begin{table}
+\begin{center}
+\begin{tabular}{|c||c|c|}
+\hline 
+preamplification [dB]  & 	dynamic range SQ [dB] & dynamic range HQ [dB]	\\	 \hline
+70 &	72 & 81 \\
+55 &	84 & 95 \\
+40 &	93 & 108	\\
+25&	92 & 116 \\
+16 (HQ), 20 (SQ) & 97 & 122\\
+\hline
+\end{tabular}
+\caption{dynamic ranges and THD+N for standard and high quality microphone inputs and analog-digital conversion}
+\label{tab:amplgains}
+\end{center}
+\end{table}
+\begin{leftbar}
+\textit{Note:\\
+When converting a digital signal to the analog domain a maximum of $+3dB_{FS}$ is possible, but at this area distortions occur.}
+\end{leftbar}
 
 %---------------------------------------------------------------------------------------------------------
 %---------------------------------------------------------------------------------------------------------
@@ -410,26 +433,6 @@ Figure \ref{fig:adlawo} shows the frequency response of the microphone channel a
 
 
 
-\begin{center}
-\begin{tabular}{|c||c|c|}
-\hline 
-SIL & 	PFH &		RRF\\ \hline
-1 &	0.00001-0.000001 &	100,000-1,000,000\\
-2 &	0.000001-0.0000001 &		1,000,000-10,000,000\\
-3 &	0.0000001-0.00000001 		& 10,000,000-100,000,000\\
-4 &	0.00000001-0.000000001 &	100,000,000-1,000,000,000\\
-\hline
-\end{tabular}
-\end{center}
-
-
-\begin{center}
-\begin{figure}[htbp]
-\includegraphics[width=11cm,keepaspectratio=true]{PROFIsafe}
-\caption{PROFIsafe}
-\label{Abb.:1}
-\end{figure}
-\end{center}
 
 
 \begin{appendix}
@@ -444,6 +447,7 @@ SIL & 	PFH &		RRF\\ \hline
 \nomenclature{SSL}{Solid State Logic}
 \nomenclature{DALLIS}{Digital Audio Line Level Interface System}
 \nomenclature{$dB_{FS}$}{dB Full Scale}
+\nomenclature{SQ}{Standard Quality}
 
 
 
