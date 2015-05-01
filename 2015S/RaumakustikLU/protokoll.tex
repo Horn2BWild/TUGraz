@@ -172,6 +172,7 @@ Laborbetreuung: DI\,Dr.\,techn. Franz Graf \\
 Die Berechnung der Mindestdistanz $d_{min}$ zwischen Schallquelle und Empf\"anger wird mit folgender Formel durchgef\"uhrt.
 \begin{equation}
 d_{min}=2\cdot \sqrt{\frac{V}{c\cdot T}}
+\label{eq:dmin}
 \end{equation}
 Der Aufnahmeraum ist in Abbildung \ref{fig:ARgeometrics} ersichtlich. Das Raumvolumen ergibt sich bei gegebenen Ma\ss en zu 
 \begin{equation}
@@ -229,7 +230,7 @@ Die Messung wurde bei einer Temperatur von $22,6^\circ C $ und einer relativen L
 \begin{figure}[htbp]
 \begin{center}
 \includegraphics[width=14cm,keepaspectratio=true]{AR}
-\caption{Experimenteller Messaufbau im Aufnahmeraum (links: Grundriss; rechts: H\"ohenmodell)}
+\caption{Experimenteller Messaufbau im Aufnahmeraum (links: Grundriss; rechts: Seitenriss)}
 \label{fig:ARgeometrics}
 \end{center}
 \end{figure}
@@ -268,6 +269,22 @@ Die Messkette zur Messung der Nachhallzeit mittels Impulsschallquelle ist in Abb
 \subsection{Impulsmessung}
 \subsubsection{Einf\"uhrung}
 Die theoretischen Grundlagen entsprechen jenen in Kapitel \ref{Impulseinfuehrung}.
+\subsubsection{Grundlegende Berechnungen}
+Die Berechnung der Mindestdistanz $d_{min}$ erfolgt mit Formel \ref{eq:dmin}. Eine ungef\"ahre Nachhallzeit wurde mittels Klatschen gesch\"atzt und als durchschnittlich $T=1.2s$ angenommen. Das Raumvolumen ergibt sich nach folgender Berechnung.
+\begin{equation}
+V_{i2}=\Big[7.4m\cdot4.1m+1.5m\cdot2.8m+(16m-7.4m-1.5m)\cdot\frac{2.8m+4.1m}{2}\Big]\cdot10.2m
+\end{equation}
+\begin{equation}
+V_{i2}= 602\,m^{3}
+\end{equation}
+Eine minimale Distanz $d_{min}$ zwischen Impulsschallquelle und Mikrofon ergibt sich durch Berechnung mit folgender Formel.
+\begin{equation}
+d_{min}=2\cdot\sqrt{\frac{602\,m^{3}}{343\frac\,{m}{s}\cdot 1.2s}}=2.42\,m
+\end{equation}
+\begin{leftbar}
+\textit{ Hinweis:\\
+Volumenseinbu\ss en durch Einbauten wie Tische oder Bestuhlung sowie das Volumen des im Raum eingebauten Regieraums wurden f\"ur die Volumensberechnung nicht ber\"ucksichtigt. Die berechnete Mindestdistanz ist daher geringf\"ugig gr\"o\ss er als das Optimum.}
+\end{leftbar}
 \subsubsection{Experimenteller Aufbau}
 \paragraph{Verwendetes Equipment}
 \begin{itemize}
@@ -289,7 +306,7 @@ Die Geometrien des H\"orsaals i2 sind in Abbildung \ref{fig:i2geometrics} ersich
 \begin{figure}[htbp]
 \begin{center}
 \includegraphics[width=14cm,keepaspectratio=true]{i2}
-\caption{Experimenteller Messaufbau im i2 (links: Grundriss; rechts: H\"ohenmodel)}
+\caption{Experimenteller Messaufbau im i2 (links: Grundriss; rechts: Seitenriss)}
 \label{fig:i2geometrics}
 \end{center}
 \end{figure}
