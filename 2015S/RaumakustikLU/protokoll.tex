@@ -166,10 +166,24 @@ Laborbetreuung: DI\,Dr.\,techn. Franz Graf \\
 \section{Messung im Aufnahmeraum AR}
 \subsection{Messung mittels Methode des abgeschalteten Rauschens}
 \subsubsection{Einf\"uhrung}
+\subsubsection{Grundlegende Berechnungen}
+\paragraph{Berechnung der Mindestdistanz $d_{min}$}
 \begin{equation}
 d_{min}=2\cdot \sqrt{\frac{V}{c\cdot T}}
 \end{equation}
-\subsubsection{Übungsaufbau}
+Der Aufnahmeraum ist in Abbildung \ref{fig:ARgeometrics} ersichtlich. Das Raumvolumen ergibt sich bei gegebenen Ma\ss en zu 
+\begin{equation}
+V_{AR} = B\cdot T\cdot H = 5.8\,m\cdot 7.4\,m\cdot 2.88\,m = 124\,m^{3}
+\end{equation}
+Eine durchschnittliche Nachhallzeit wurde mittels Klatschtest gesch\"atzt und als Mittelwert $T=0.3\,s$ angenommen. Die erforderliche Mindestdistanz zwischen Rauschquelle und Mikrofon betr\"agt somit
+\begin{equation}
+d_{min}=2\cdot \sqrt{\frac{124\,m^{3}}{343\,\frac{m}{s}\cdot 0.3\,s}} = 2.2\,m
+\end{equation}
+\begin{leftbar}
+\textit{ Hinweis:\\
+Die Decke des Aufnahmeraums ist in zwei unterschiedlichen H\"ohen abgesetzt. Zur Berechnung des Raumvolumens wurde eine mittlere Deckenh\"ohe mit $H=\frac{H_{min}+H_{max}}{2}$ approximiert. Im Raum befindliche Objekte (Tische, Fl\"ugel, etc.) wurden nicht ber\"ucksichtigt. Das berechnete Raumvolumen ist daher etwas gr\"o\ss er als das tats\"achliche, wodurch das berechnete $d_{min}$ ebenfalls einen etwas h\"oheren Wert aufweist.} 
+\end{leftbar}
+\subsubsection{Experimenteller Aufbau}
 \paragraph{Verwendetes Equipment}
 \begin{itemize}
 \item Messmikrofon: Larson Davis PRM900B3562
@@ -197,8 +211,8 @@ des Weiteren:
 \item Fujitso Siemens Notebook
 \end{itemize}
 
-\paragraph{Messbedingungen}
-Die Geometrien des Aufnahmeraums sind in Abbildung \ref{fig:ARgeometrics} ersichtlich. Der Raum wurde in unbesetztem Zustand vermessen. Der Fußboden besteht aus filz\"ahnlichem Material, die W\"ande sind f\"ur die Messung mit schwarzen Vorh\"angen abgedeckt. Die L\"uftungsanlage ist f\"ur die Dauer der Messung deaktiviert, die T\"ure zum Regieplatz 2 (RP2) vollst\"andig geschlossen. Da das geeichte Spezialkabel zur Verbindung von Messmikrofon und Pegelmesser durch die T\"ure zum Regieplatz 1 (RP1) gef\"uhrt wird, ist diese T\"ure nur angelehnt.\\
+\subsubsection{Messbedingungen}
+Die Geometrien des Aufnahmeraums sind in Abbildung \ref{fig:ARgeometrics} ersichtlich. Der Raum wurde in unbesetztem Zustand vermessen. Der Fu\ss boden besteht aus filz\"ahnlichem Material, die W\"ande sind f\"ur die Messung mit schwarzen Vorh\"angen abgedeckt. Die L\"uftungsanlage ist f\"ur die Dauer der Messung deaktiviert, die T\"ure zum Regieplatz 2 (RP2) vollst\"andig geschlossen. Da das geeichte Spezialkabel zur Verbindung von Messmikrofon und Pegelmesser durch die T\"ure zum Regieplatz 1 (RP1) gef\"uhrt wird, ist diese T\"ure nur angelehnt.\\
 Die Messung wurde bei einer Temperatur von $22,6^\circ C $ und einer relativen Luftfeuchtigkeit von $56,1\;rel\%$ durchgef\"uhrt.
 \begin{figure}[htbp]
 \begin{center}
@@ -210,7 +224,7 @@ Die Messung wurde bei einer Temperatur von $22,6^\circ C $ und einer relativen L
 \subsection{Impulsmessung}
 \subsubsection{Einf\"uhrung}
 \label{Impulseinfuehrung}
-\subsubsection{Übungsaufbau}
+\subsubsection{Experimenteller Aufbau}
 \paragraph{Verwendetes Equipment}
 \begin{itemize}
 \item Messmikrofon: Larson Davis PRM900B3562
@@ -228,7 +242,7 @@ Die Messung wurde bei einer Temperatur von $22,6^\circ C $ und einer relativen L
 \subsection{Impulsmessung}
 \subsubsection{Einf\"uhrung}
 Die theoretischen Grundlagen entsprechen jenen in Kapitel \ref{Impulseinfuehrung}.
-\subsubsection{Übungsaufbau}
+\subsubsection{Experimenteller Aufbau}
 \paragraph{Verwendetes Equipment}
 \begin{itemize}
 \item Pegelmesser (handheld): NTi XL2
