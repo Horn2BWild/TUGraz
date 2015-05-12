@@ -336,10 +336,12 @@ Die Geometrien des H\"orsaals i2 sind in Abbildung \ref{fig:i2geometrics} ersich
 \end{figure}
 \subsubsection{Messergebnisse}
 \begin{center}
+\pgfplotsset{width=14cm}
 \begin{tikzpicture}
-\begin{semilogxaxis}[title={$RT_{60}$ H\"orsaal i2}, xlabel={Frequenz}, ylabel={Nachhallzeit}]
+\begin{semilogxaxis}[title={$RT_{60}$ H\"orsaal i2}, xlabel={Frequenz}, ylabel={Nachhallzeit}, grid=both]
 \addplot table {MP1.csv};
-\addplot table {MP2.csv];
+\addplot table {MP2.csv};
+\legend{{Messpunkt 1}, {Messpunkt 2}}
 \end{semilogxaxis}
 \end{tikzpicture}
 \end{center}
