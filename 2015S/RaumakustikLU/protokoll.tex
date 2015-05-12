@@ -8,6 +8,8 @@
 \usepackage{nomencl}
 \usepackage{framed,color}
 \usepackage[pdftex]{graphicx}
+% fuer "Excel"Graphen direkt in Latex
+\usepackage{pgfplots}
 % f\"{u}r normales LaTeX->dvi, Bilder als .eps speichern:
 \usepackage{graphicx} \DeclareGraphicsExtensions{.eps} %\graphicspath{{bilder/eps/}}
 
@@ -333,6 +335,17 @@ Die Geometrien des H\"orsaals i2 sind in Abbildung \ref{fig:i2geometrics} ersich
 \end{center}
 \end{figure}
 \subsubsection{Messergebnisse}
+\begin{center}
+\begin{tikzpicture}
+\begin{semilogxaxis}[title={$RT_{60}$ H\"orsaal i2}, xlabel={Frequenz}, ylabel={Nachhallzeit}]
+\addplot table {MP1.csv};
+\addplot table {MP2.csv];
+\end{semilogxaxis}
+\end{tikzpicture}
+\end{center}
+
+
+
 %\begin{table}
 %\begin{center}
 %\begin{tabular}{|c||c|c|}
