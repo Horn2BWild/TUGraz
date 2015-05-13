@@ -172,6 +172,7 @@ Hierzu wird der Raum mit einem Rauschsignal angeregt, bis ein diffuses Schallfel
 \item Messung mittels Impulsschallquelle\\
 Der Raum wird mittels einer Impulsschallquelle (platzender Ballon, Pistole, etc.) angeregt. Der Pegelabfall unmittelbar nach Auftreten des Impulses wird gemessen.
 \end{itemize}
+Grundsätzlich ist eine Nachhalleitmmessung im Frequenzbereich von 100Hz-4kHz\footnote{Im Wesentlichen befinden sich Sprache und Musik in diesem Bereich. Weiters ist eine Messung von Frequenzen, deren Wellenlänge größer als die Raumdimensionen ist, nich sinnvoll.} in besetztem Zustand sinnvoller, da es sich in diesem Fall um die Messung des \textit{Raumes im Verwendungszustand} handelt. Eine Messung des Raumes in unbesetztem Zustand kann jedoch sinnvoll sein, um mit verschiedenen Absorptionsgraden den besetzten Zustand zu simulieren.
 %---------------------------------------------------------------------------------------------------------
 \section{Messung im Aufnahmeraum AR}
 Der Aufnahmeraum ist in Abbildung \ref{fig:ARgeometrics} dargestellt. 
@@ -204,14 +205,6 @@ Die Decke des Aufnahmeraums ist in zwei unterschiedlichen H\"ohen abgesetzt. Zur
 %---------------------------------------------------------------------------------------------------------
 %---------------------------------------------------------------------------------------------------------
 \subsection{Messung mittels Methode des abgeschalteten Rauschens}
-\begin{figure}[htbp]
-\begin{center}
-\includegraphics[width=14cm,keepaspectratio=true]{Grundrauschpegel}
-\caption{Grundrauschpegel im Aufnahmeraum AR}
-\label{fig:i2geometrics}
-\end{center}
-\end{figure}
-
 
 \subsubsection{Experimenteller Aufbau}
 Die Messkette zur Messung der Nachhallzeit mit abgeschaltetem Rauschen ist in Abbildung \ref{fig:rauschaufbau} dargestellt. Der Pegelmesser als zentrale Einheit ist zur Konfiguration sowie zur graphischen Darstellung der Messergebnisse mittels serieller Schnittstelle mit einem Notebook verbunden. Der im Pegelmesser integrierte Signalgenerator liefert ein Signal an einen idealerweise omnidirektionalen Lautsprecher. Das Signal des angeregten Raumes wird mit einem Messmikrofon detektiert und an den Pegelmesser zurückgeliefert, welcher die Analyse der Nachhallzeiten vornimmt.
@@ -222,6 +215,20 @@ Die Messkette zur Messung der Nachhallzeit mit abgeschaltetem Rauschen ist in Ab
 \label{fig:rauschaufbau}
 \end{center}
 \end{figure}
+Das Mikrofon wurde mit dem Kalibrator kalibriert. Dazu wurde das Mikrofon mit dem Kalibrator verbunden und in der Software die calibrate-Funktion aktiviert. Um den Bereich des notwendigen Schalldruckpegels zu ermitteln, wurde der Grundrauschpegel im Raum mit einem vorgefertigten Setup ermittelt. Der Grundrauschpegel ist in Abbildung \ref{fig:grundrauschpegel} ersichtlich und beträgt im Mittel 47dB. 
+\begin{figure}[htbp]
+\begin{center}
+\includegraphics[width=14cm,keepaspectratio=true]{Grundrauschpegel}
+\caption{Grundrauschpegel im Aufnahmeraum AR (blau: Grundrauschpegel, rot: gemittelter Grundrauschpegel)}
+\label{fig:grundrauschpegel}
+\end{center}
+\end{figure}
+Für die Berechnung der Nachhallzeit $T_{60}$ ist daher ein Signalpegel von $L_{Grundrauschen}+L_{60dB}+L_{headroom}=47dB+60dB+5dB=112dB$ notwendig. Die Messung wurde mit einem vorgefertigten Setup mit folgenden Einstellungen durchgeführt:
+\begin{itemize}
+\item mode: pink wide
+\item state: off at run after delay
+\item Mittelung von 3 Messungen
+\end{itemize}
 \paragraph{Verwendetes Equipment}
 \begin{itemize}
 \item Messmikrofon: Larson Davis PRM900B3562
