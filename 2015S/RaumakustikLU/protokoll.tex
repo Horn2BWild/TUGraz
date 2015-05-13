@@ -165,7 +165,7 @@ Laborbetreuung: DI\,Dr.\,techn. Franz Graf \\
 %---------------------------------------------------------------------------------------------------------
 
 \chapter{Messung der Nachhallzeit}
-Ein wichtiges Kriterium für die statischen akustischen Verhältnisse eines Raumes ist die Nachhallzeit. Da das Ohr nicht den gesamten Lautstärkebereich von 150dB wahrnehmen kann, sondern bei einer Pegeldifferenz von 60dB unmittelbar nach dem Ende eines Nutzsignals völlige Ruhe empfindet, wird in der Regel die Nachhallzeit $T_{60}$ berechnet.[REF RAUMAKUSTIK SKRIPT SPSC v5.4]  Ist das für diese Messung erforderliche SNR durch diverse Gründe nicht erreichbar, ist auch eine Messung von $T_{20}$ oder $T_{30}$ und eine Interpolation dieser Nachhallzeit auf die gesamte Dauer möglich. Die Messung der Nachhallzeit kann unter anderem mit folgenden Methoden gemessen werden:
+Ein wichtiges Kriterium für die statischen akustischen Verhältnisse eines Raumes ist die Nachhallzeit. Da das Ohr nicht den gesamten Lautstärkebereich von 140dB wahrnehmen kann, sondern bei einer Pegeldifferenz von 60dB unmittelbar nach dem Ende eines Nutzsignals völlige Ruhe empfindet, wird in der Regel die Nachhallzeit $T_{60}$ berechnet.\footnote{Raumakustik Vorlesungsskript, v.5.4}  Ist das für diese Messung erforderliche SNR durch diverse Gründe nicht erreichbar, ist auch eine Messung von $T_{20}$ oder $T_{30}$ und eine Interpolation dieser Nachhallzeit auf die gesamte Dauer möglich. Die Messung der Nachhallzeit kann unter anderem mit folgenden Methoden gemessen werden:
 \begin{itemize}
 \item Methode des abgeschalteten Rauschens\\
 Hierzu wird der Raum mit einem Rauschsignal angeregt, bis ein diffuses Schallfeld entsteht. Nach dem Abschalten der Rauschquelle wird der Pegelabfall in den gewünschten Oktav- oder Terzbändern gemessen.
@@ -321,7 +321,7 @@ Die Analyse und Generierung des Graphen geschieht durch die selbe Methode wie in
 %---------------------------------------------------------------------------------------------------------
 \section{Messung im H\"orsaal i2}
 \subsection{Impulsmessung}
-Die theoretischen Grundlagen entsprechen jenen in Kapitel \ref{Impulseinfuehrung}.
+Die theoretischen Grundlagen entsprechen jenen in Kapitel \ref{Impulseinfuehrung}. Der Hörsaal ist in Abbildung \ref{fig:i2geometrics} dargestellt.
 \subsubsection{Grundlegende Berechnungen}
 Die Berechnung der Mindestdistanz $d_{min}$ erfolgt mit Formel \ref{eq:dmin}. Eine ungef\"ahre Nachhallzeit wurde mittels Klatschen gesch\"atzt und als durchschnittlich $T=1.2s$ angenommen. Das Raumvolumen ergibt sich nach folgender Berechnung.
 \begin{equation}
@@ -339,7 +339,7 @@ d_{min}=2\cdot\sqrt{\frac{602\,m^{3}}{343\frac\,{m}{s}\cdot 1.2s}}=2.42\,m
 Volumenseinbu\ss en durch Einbauten wie Tische oder Bestuhlung sowie das Volumen des im Raum eingebauten Regieraums wurden f\"ur die Volumensberechnung nicht ber\"ucksichtigt. Die berechnete Mindestdistanz ist daher geringf\"ugig gr\"o\ss er als das Optimum.}
 \end{leftbar}
 \subsubsection{Experimenteller Aufbau}
-
+Zur Messung der Nachhallzeit in diesem Hörsaal wurde ein mobiler Pegelmesser verwendet. Da zur Messung mittels Impulsschallquelle weniger Equipment benötigt wird, wurde für die Nachhallzeitmessung diese Methode gewählt. Als Impulsquelle wird ein Revolver verwendet. Die beiden Messpunkte sowie -positionen sind in Abbildung \ref{fig:i2geometrics} ersichtlich. Ein Messmikrofon erfasst den abgegebenen Impuls sowie die Raumantwort und ist mit dem mobilen Pegelmesser verbunden. Es werden 3 Messdurchgänge aufgezeichnet und vom Pegelmesser automatisch gemittelt.
 \paragraph{Verwendetes Equipment}
 \begin{itemize}
 \item Pegelmesser (handheld): NTi XL2
@@ -356,7 +356,7 @@ Volumenseinbu\ss en durch Einbauten wie Tische oder Bestuhlung sowie das Volumen
 \end{itemize}
 \end{itemize}
 \paragraph{Messbedingungen}
-Die Geometrien des H\"orsaals i2 sind in Abbildung \ref{fig:i2geometrics} ersichtlich. Der H\"orsaal wird in unbesetztem Zustand vermesssen. Zum Zeitpunkt der Messung sind im Raum zwei Personen anwesend. Der H\"orsaal ist mit filz\"ahnlichem Bodenbelag sowie akustischen Lochplatten an den W\"anden ausgestattet. Die T\"uren sind w\"ahrend des Messvorgangs geschlossen. Die Messung wurde bei einer Temperatur von $23^\circ C$ und einer relativen Luftfeuchtigkeit von $43,3rel\%$ durchgef\"uhrt. 
+Der H\"orsaal wird in unbesetztem Zustand vermesssen. Zum Zeitpunkt der Messung sind im Raum zwei Personen anwesend. Der H\"orsaal ist mit filz\"ahnlichem Bodenbelag sowie akustischen Lochplatten an den W\"anden ausgestattet. Die T\"uren sind w\"ahrend des Messvorgangs geschlossen. Die Messung wurde bei einer Temperatur von $23^\circ C$ und einer relativen Luftfeuchtigkeit von $43,3rel\%$ durchgef\"uhrt. 
 \begin{figure}[htbp]
 \begin{center}
 \includegraphics[width=14cm,keepaspectratio=true]{i2}
@@ -365,17 +365,18 @@ Die Geometrien des H\"orsaals i2 sind in Abbildung \ref{fig:i2geometrics} ersich
 \end{center}
 \end{figure}
 \subsubsection{Messergebnisse}
+Die Messergebnisse werden vom mobilen Pegelmesser als Textdateien aufgezeichnet und wurden später am Computer graphisch ausgewertet. Die Messergebnisse sind in Abbildung 1.8 ersichtlich.
 \begin{center}
 \pgfplotsset{width=14cm}
 \begin{tikzpicture}
-\begin{semilogxaxis}[title={$RT_{60}$ H\"orsaal i2}, xlabel={Frequenz}, ylabel={Nachhallzeit}, grid=both]
+\begin{semilogxaxis}[title={$Abbildung 1.8: RT_{60}$ H\"orsaal i2}, xlabel={Frequenz}, ylabel={Nachhallzeit}, grid=both]
 \addplot table {MP1.csv};
 \addplot table {MP2.csv};
 \legend{{Messpunkt 1}, {Messpunkt 2}}
 \end{semilogxaxis}
 \end{tikzpicture}
 \end{center}
-
+Ab einer Frequenz von etwa 1000Hz kann festgestellt werden, dass die Nachhallzeiten für beide Messpunkte annähernd gleich sind. Die großen Fluktuationen im unteren Frequenzbereich sind auf die großen Wellenlängen zurückzuführen. Ein Abfall der Nachhallzeiten zu höheren Frequenzen ergibt ein natürliches Klangbild. 
 
 
 %\begin{table}
