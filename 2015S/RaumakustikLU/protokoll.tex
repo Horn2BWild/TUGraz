@@ -165,14 +165,14 @@ Laborbetreuung: DI\,Dr.\,techn. Franz Graf \\
 %---------------------------------------------------------------------------------------------------------
 
 \chapter{Messung der Nachhallzeit}
-Ein wichtiges Kriterium für die statischen akustischen Verhältnisse eines Raumes ist die Nachhallzeit. Da das Ohr nicht den gesamten Lautstärkebereich von 140dB wahrnehmen kann, sondern bei einer Pegeldifferenz von 60dB unmittelbar nach dem Ende eines Nutzsignals völlige Ruhe empfindet, wird in der Regel die Nachhallzeit $T_{60}$ berechnet.\footnote{Raumakustik Vorlesungsskript, v.5.4}  Ist das für diese Messung erforderliche SNR durch diverse Gründe nicht erreichbar, ist auch eine Messung von $T_{20}$ oder $T_{30}$ und eine Interpolation dieser Nachhallzeit auf die gesamte Dauer möglich. Die Messung der Nachhallzeit kann unter anderem mit folgenden Methoden gemessen werden:
+Ein wichtiges Kriterium f\"ur die statischen akustischen Verh\"altnisse eines Raumes ist die Nachhallzeit. Da das Ohr nicht den gesamten Lautst\"arkebereich von 140dB wahrnehmen kann, sondern bei einer Pegeldifferenz von 60dB unmittelbar nach dem Ende eines Nutzsignals v\"ollige Ruhe empfindet, wird in der Regel die Nachhallzeit $T_{60}$ berechnet.\footnote{Raumakustik Vorlesungsskript, v.5.4}  Ist das f\"ur diese Messung erforderliche SNR durch diverse Gr\"unde nicht erreichbar, ist auch eine Messung von $T_{20}$ oder $T_{30}$ und eine Interpolation dieser Nachhallzeit auf die gesamte Dauer m\"oglich. Die Messung der Nachhallzeit kann unter anderem mit folgenden Methoden gemessen werden:
 \begin{itemize}
 \item Methode des abgeschalteten Rauschens\\
-Hierzu wird der Raum mit einem Rauschsignal angeregt, bis ein diffuses Schallfeld entsteht. Nach dem Abschalten der Rauschquelle wird der Pegelabfall in den gewünschten Oktav- oder Terzbändern gemessen.
+Hierzu wird der Raum mit einem Rauschsignal angeregt, bis ein diffuses Schallfeld entsteht. Nach dem Abschalten der Rauschquelle wird der Pegelabfall in den gew\"unschten Oktav- oder Terzb\"andern gemessen.
 \item Messung mittels Impulsschallquelle\\
 Der Raum wird mittels einer Impulsschallquelle (platzender Ballon, Pistole, etc.) angeregt. Der Pegelabfall unmittelbar nach Auftreten des Impulses wird gemessen.
 \end{itemize}
-Grundsätzlich ist eine Nachhalleitmmessung im Frequenzbereich von 100Hz-4kHz\footnote{Im Wesentlichen befinden sich Sprache und Musik in diesem Bereich. Weiters ist eine Messung von Frequenzen, deren Wellenlänge größer als die Raumdimensionen ist, nich sinnvoll.} in besetztem Zustand sinnvoller, da es sich in diesem Fall um die Messung des \textit{Raumes im Verwendungszustand} handelt. Eine Messung des Raumes in unbesetztem Zustand kann jedoch sinnvoll sein, um mit verschiedenen Absorptionsgraden den besetzten Zustand zu simulieren.
+Grunds\"atzlich ist eine Nachhalleitmmessung im Frequenzbereich von 100Hz-4kHz\footnote{Im Wesentlichen befinden sich Sprache und Musik in diesem Bereich. Weiters ist eine Messung von Frequenzen, deren Wellenl\"ange gr\"o\ss er als die Raumdimensionen ist, nich sinnvoll.} in besetztem Zustand sinnvoller, da es sich in diesem Fall um die Messung des \textit{Raumes im Verwendungszustand} handelt. Eine Messung des Raumes in unbesetztem Zustand kann jedoch sinnvoll sein, um mit verschiedenen Absorptionsgraden den besetzten Zustand zu simulieren.
 %---------------------------------------------------------------------------------------------------------
 \section{Messung im Aufnahmeraum AR}
 Der Aufnahmeraum ist in Abbildung \ref{fig:ARgeometrics} dargestellt. 
@@ -207,7 +207,7 @@ Die Decke des Aufnahmeraums ist in zwei unterschiedlichen H\"ohen abgesetzt. Zur
 \subsection{Messung mittels Methode des abgeschalteten Rauschens}
 
 \subsubsection{Experimenteller Aufbau}
-Die Messkette zur Messung der Nachhallzeit mit abgeschaltetem Rauschen ist in Abbildung \ref{fig:rauschaufbau} dargestellt. Der Pegelmesser als zentrale Einheit ist zur Konfiguration sowie zur graphischen Darstellung der Messergebnisse mittels serieller Schnittstelle mit einem Notebook verbunden. Der im Pegelmesser integrierte Signalgenerator liefert ein Signal an einen idealerweise omnidirektionalen Lautsprecher. Das Signal des angeregten Raumes wird mit einem Messmikrofon detektiert und an den Pegelmesser zurückgeliefert, welcher die Analyse der Nachhallzeiten vornimmt.
+Die Messkette zur Messung der Nachhallzeit mit abgeschaltetem Rauschen ist in Abbildung \ref{fig:rauschaufbau} dargestellt. Der Pegelmesser als zentrale Einheit ist zur Konfiguration sowie zur graphischen Darstellung der Messergebnisse mittels serieller Schnittstelle mit einem Notebook verbunden. Der im Pegelmesser integrierte Signalgenerator liefert ein Signal an einen idealerweise omnidirektionalen Lautsprecher. Das Signal des angeregten Raumes wird mit einem Messmikrofon detektiert und an den Pegelmesser zur\"uckgeliefert, welcher die Analyse der Nachhallzeiten vornimmt.
 \begin{figure}[htbp]
 \begin{center}
 \includegraphics[width=10cm,keepaspectratio=true]{rauschaufbau}
@@ -215,7 +215,7 @@ Die Messkette zur Messung der Nachhallzeit mit abgeschaltetem Rauschen ist in Ab
 \label{fig:rauschaufbau}
 \end{center}
 \end{figure}
-Das Mikrofon wurde mit dem Kalibrator kalibriert. Dazu wurde das Mikrofon mit dem Kalibrator verbunden und in der Software die calibrate-Funktion aktiviert. Um den Bereich des notwendigen Schalldruckpegels zu ermitteln, wurde der Grundrauschpegel im Raum mit einem vorgefertigten Setup ermittelt. Der Grundrauschpegel ist in Abbildung \ref{fig:grundrauschpegel} ersichtlich und beträgt im Mittel 47dB. 
+Das Mikrofon wurde mit dem Kalibrator kalibriert. Dazu wurde das Mikrofon mit dem Kalibrator verbunden und in der Software die calibrate-Funktion aktiviert. Um den Bereich des notwendigen Schalldruckpegels zu ermitteln, wurde der Grundrauschpegel im Raum mit einem vorgefertigten Setup ermittelt. Der Grundrauschpegel ist in Abbildung \ref{fig:grundrauschpegel} ersichtlich und betr\"agt im Mittel 47dB. 
 \begin{figure}[htbp]
 \begin{center}
 \includegraphics[width=14cm,keepaspectratio=true]{Grundrauschpegel}
@@ -223,7 +223,7 @@ Das Mikrofon wurde mit dem Kalibrator kalibriert. Dazu wurde das Mikrofon mit de
 \label{fig:grundrauschpegel}
 \end{center}
 \end{figure}
-Für die Berechnung der Nachhallzeit $T_{60}$ ist daher ein Signalpegel von $L_{Grundrauschen}+L_{60dB}+L_{headroom}=47dB+60dB+5dB=112dB$ notwendig. Die Messung wurde mit einem vorgefertigten Setup mit folgenden Einstellungen durchgeführt:
+F\"ur die Berechnung der Nachhallzeit $T_{60}$ ist daher ein Signalpegel von $L_{Grundrauschen}+L_{60dB}+L_{headroom}=47dB+60dB+5dB=112dB$ notwendig. Die Messung wurde mit einem vorgefertigten Setup mit folgenden Einstellungen durchgef\"uhrt:
 \begin{itemize}
 \item mode: pink wide
 \item state: off at run after delay
@@ -263,16 +263,16 @@ Die Messung wurde bei einer Temperatur von $22,6^\circ C $ und einer relativen L
 
 \subsubsection{Messergebnisse}
 \label{anleitung}
-Die gemessenen Ergebnisse können folgendermaßen darfestellt werden:
+Die gemessenen Ergebnisse k\"onnen folgenderma\ss en darfestellt werden:
 \begin{enumerate}
 \item \textit{Process} $\rightarrow$ \textit{Architectural Acoustics} $\rightarrow$ \textit{Reverbation Time}
 \item Analyse des Messergebnisses in Terzen
-\item Überprüfung der Steigungen 
+\item \"Uberpr\"ufung der Steigungen 
 \item \textit{Average and Store}
-\item 1-4 mit \textit{calculate new shot} für jede der drei Messungen durchführen
+\item 1-4 mit \textit{calculate new shot} f\"ur jede der drei Messungen durchf\"uhren
 \item Erzeugen des Graphs mittels \textit{Insert} $\rightarrow$ \textit{GraphTemplate}
 \end{enumerate}
-Die berechneten Nachhallzeiten sind in Abbildung \ref{fig:rauschenmp1} dargestellt. Ein Anstieg der Nachhallzeit zu tiefen Frequenzen ist erkennbar. Dies entspricht einem natürlichen Klang. Ab einer Frequenz von 500Hz ist die Nachhallzeit des Aufnahmeraums im Messpunkt annähernd Konstant. Generell ist die Nachhallzeit im Raum gering. Dadurch ist er für den gedachten Zweck der Aufnahme ideal. Eine Musikwiedergabe im eigentlichen Sinn wäre jedoch als sehr trocken zu bezeichnen.
+Die berechneten Nachhallzeiten sind in Abbildung \ref{fig:rauschenmp1} dargestellt. Ein Anstieg der Nachhallzeit zu tiefen Frequenzen ist erkennbar. Dies entspricht einem nat\"urlichen Klang. Ab einer Frequenz von 500Hz ist die Nachhallzeit des Aufnahmeraums im Messpunkt ann\"ahernd Konstant. Generell ist die Nachhallzeit im Raum gering. Dadurch ist er f\"ur den gedachten Zweck der Aufnahme ideal. Eine Musikwiedergabe im eigentlichen Sinn w\"are jedoch als sehr trocken zu bezeichnen.
 \begin{figure}[htbp]
 \begin{center}
 \includegraphics[width=14cm,keepaspectratio=true]{RauschenMP1}
@@ -286,7 +286,7 @@ Die berechneten Nachhallzeiten sind in Abbildung \ref{fig:rauschenmp1} dargestel
 \subsubsection{Einf\"uhrung}
 \label{Impulseinfuehrung}
 \subsubsection{Experimenteller Aufbau}
-Die Messkette zur Messung der Nachhallzeit mittels Impulsschallquelle ist in Abbildung \ref{fig:impulsaufbau} dargestellt. Im Wesentlichen entspricht der Aufbau jenem der Methode mittels abgeschaltetem Rauschen. Anstatt der Rauschquelle ist während der Messung eine Person im Raum anwesend, welche mittels Revolver als Impulsgeber dient.\footnote{Es ist darauf zu achten, dass alle sich in unmittelbarer Hörnähe zur Impulsschallquelle befindenden Personen mit Gehörschutz ausgestattet sind.} Der Impuls sowie die daraus resultierende Raumantwort werden durch ein Messmikrofon erfasst und durch den Pegelmesser analysiert. Die Messung wird automatisch durch Anwendung eines \textit{Pegeltriggers} gestartet. 
+Die Messkette zur Messung der Nachhallzeit mittels Impulsschallquelle ist in Abbildung \ref{fig:impulsaufbau} dargestellt. Im Wesentlichen entspricht der Aufbau jenem der Methode mittels abgeschaltetem Rauschen. Anstatt der Rauschquelle ist w\"ahrend der Messung eine Person im Raum anwesend, welche mittels Revolver als Impulsgeber dient.\footnote{Es ist darauf zu achten, dass alle sich in unmittelbarer H\"orn\"ahe zur Impulsschallquelle befindenden Personen mit Geh\"orschutz ausgestattet sind.} Der Impuls sowie die daraus resultierende Raumantwort werden durch ein Messmikrofon erfasst und durch den Pegelmesser analysiert. Die Messung wird automatisch durch Anwendung eines \textit{Pegeltriggers} gestartet. 
 \begin{figure}[htbp]
 \begin{center}
 \includegraphics[width=8cm,keepaspectratio=true]{impulsaufbau}
@@ -309,7 +309,7 @@ Die Messkette zur Messung der Nachhallzeit mittels Impulsschallquelle ist in Abb
 \paragraph{Messbedingungen}
 Die Messbedingungen entsprechen im Wesentlichen jenen der Messmethode mit abgeschaltetem Rauschen. Abweichend von diesen war bei dieser Messung eine Person als Impulsgeber im Raum anwesend.
 \subsubsection{Messergebnisse}
-Die Analyse und Generierung des Graphen geschieht durch die selbe Methode wie in Kapitel \ref{anleitung} - Messergebnisse - beschrieben. Die erhaltenen Messergebnisse sind in Abbildung \ref{fig:impulsmp1} ersichtlich. Die erhaltenen Nachhallzeiten für tiefe Frequenzen sind etwas tiefer als bei derMessung mittels abgeschaltetem Rauschen, ab 250Hz sind die Werte annähernd konstant und entsprechen im Wesentlichen jenen der Messung mit abgeschaltetem Rauschen.
+Die Analyse und Generierung des Graphen geschieht durch die selbe Methode wie in Kapitel \ref{anleitung} - Messergebnisse - beschrieben. Die erhaltenen Messergebnisse sind in Abbildung \ref{fig:impulsmp1} ersichtlich. Die erhaltenen Nachhallzeiten f\"ur tiefe Frequenzen sind etwas tiefer als bei derMessung mittels abgeschaltetem Rauschen, ab 250Hz sind die Werte ann\"ahernd konstant und entsprechen im Wesentlichen jenen der Messung mit abgeschaltetem Rauschen.
 \begin{figure}[htbp]
 \begin{center}
 \includegraphics[width=14cm,keepaspectratio=true]{ImpulsMP1}
@@ -321,7 +321,7 @@ Die Analyse und Generierung des Graphen geschieht durch die selbe Methode wie in
 %---------------------------------------------------------------------------------------------------------
 \section{Messung im H\"orsaal i2}
 \subsection{Impulsmessung}
-Die theoretischen Grundlagen entsprechen jenen in Kapitel \ref{Impulseinfuehrung}. Der Hörsaal ist in Abbildung \ref{fig:i2geometrics} dargestellt.
+Die theoretischen Grundlagen entsprechen jenen in Kapitel \ref{Impulseinfuehrung}. Der H\"orsaal ist in Abbildung \ref{fig:i2geometrics} dargestellt.
 \subsubsection{Grundlegende Berechnungen}
 Die Berechnung der Mindestdistanz $d_{min}$ erfolgt mit Formel \ref{eq:dmin}. Eine ungef\"ahre Nachhallzeit wurde mittels Klatschen gesch\"atzt und als durchschnittlich $T=1.2s$ angenommen. Das Raumvolumen ergibt sich nach folgender Berechnung.
 \begin{equation}
@@ -339,7 +339,7 @@ d_{min}=2\cdot\sqrt{\frac{602\,m^{3}}{343\frac\,{m}{s}\cdot 1.2s}}=2.42\,m
 Volumenseinbu\ss en durch Einbauten wie Tische oder Bestuhlung sowie das Volumen des im Raum eingebauten Regieraums wurden f\"ur die Volumensberechnung nicht ber\"ucksichtigt. Die berechnete Mindestdistanz ist daher geringf\"ugig gr\"o\ss er als das Optimum.}
 \end{leftbar}
 \subsubsection{Experimenteller Aufbau}
-Zur Messung der Nachhallzeit in diesem Hörsaal wurde ein mobiler Pegelmesser verwendet. Da zur Messung mittels Impulsschallquelle weniger Equipment benötigt wird, wurde für die Nachhallzeitmessung diese Methode gewählt. Als Impulsquelle wird ein Revolver verwendet. Die beiden Messpunkte sowie -positionen sind in Abbildung \ref{fig:i2geometrics} ersichtlich. Ein Messmikrofon erfasst den abgegebenen Impuls sowie die Raumantwort und ist mit dem mobilen Pegelmesser verbunden. Es werden 3 Messdurchgänge aufgezeichnet und vom Pegelmesser automatisch gemittelt.
+Zur Messung der Nachhallzeit in diesem H\"orsaal wurde ein mobiler Pegelmesser verwendet. Da zur Messung mittels Impulsschallquelle weniger Equipment ben\"otigt wird, wurde f\"ur die Nachhallzeitmessung diese Methode gew\"ahlt. Als Impulsquelle wird ein Revolver verwendet. Die beiden Messpunkte sowie -positionen sind in Abbildung \ref{fig:i2geometrics} ersichtlich. Ein Messmikrofon erfasst den abgegebenen Impuls sowie die Raumantwort und ist mit dem mobilen Pegelmesser verbunden. Es werden 3 Messdurchg\"ange aufgezeichnet und vom Pegelmesser automatisch gemittelt.
 \paragraph{Verwendetes Equipment}
 \begin{itemize}
 \item Pegelmesser (handheld): NTi XL2
@@ -365,7 +365,7 @@ Der H\"orsaal wird in unbesetztem Zustand vermesssen. Zum Zeitpunkt der Messung 
 \end{center}
 \end{figure}
 \subsubsection{Messergebnisse}
-Die Messergebnisse werden vom mobilen Pegelmesser als Textdateien aufgezeichnet und wurden später am Computer graphisch ausgewertet. Die Messergebnisse sind in Abbildung 1.8 ersichtlich.
+Die Messergebnisse werden vom mobilen Pegelmesser als Textdateien aufgezeichnet und wurden sp\"ater am Computer graphisch ausgewertet. Die Messergebnisse sind in Abbildung 1.8 ersichtlich.
 \begin{center}
 \pgfplotsset{width=14cm}
 \begin{tikzpicture}
@@ -376,7 +376,7 @@ Die Messergebnisse werden vom mobilen Pegelmesser als Textdateien aufgezeichnet 
 \end{semilogxaxis}
 \end{tikzpicture}
 \end{center}
-Ab einer Frequenz von etwa 1000Hz kann festgestellt werden, dass die Nachhallzeiten für beide Messpunkte annähernd gleich sind. Die großen Fluktuationen im unteren Frequenzbereich sind auf die großen Wellenlängen zurückzuführen. Ein Abfall der Nachhallzeiten zu höheren Frequenzen ergibt ein natürliches Klangbild. 
+Ab einer Frequenz von etwa 1000Hz kann festgestellt werden, dass die Nachhallzeiten f\"ur beide Messpunkte ann\"ahernd gleich sind. Die gro\ss en Fluktuationen im unteren Frequenzbereich sind auf die gro\ss en Wellenl\"angen zur\"uckzuf\"uhren. Ein Abfall der Nachhallzeiten zu h\"oheren Frequenzen ergibt ein nat\"urliches Klangbild. 
 
 
 %\begin{table}
